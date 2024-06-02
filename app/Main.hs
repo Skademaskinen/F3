@@ -9,6 +9,11 @@ type Model = String
 
 data Action = Default deriving Show
 
+header_style = style_ (M.fromList 
+    [
+        ("text-align", "center")
+    ])
+
 main :: IO ()
 main = startApp App {..}
     where 
@@ -25,8 +30,7 @@ updateModel :: Action -> Model -> Effect Action Model
 updateModel action m = noEff (m)
 
 viewModel :: Model -> View Action
-viewModel x = div_ [] [ h1_ 
-    [ style_ (M.fromList [(
-        "text-align", "center"
-    )])
-    ] [ text (ms x) ] ]
+viewModel x = div_ [] 
+    [ 
+        h1_ [ header_style] [ text (ms x) ] 
+    ]
