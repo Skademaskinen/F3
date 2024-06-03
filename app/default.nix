@@ -1,4 +1,4 @@
-#!nix-build
+#!/usr/bin/env -S nix build -f
 
 with (import (builtins.fetchGit {
   url = "https://github.com/dmjio/miso";

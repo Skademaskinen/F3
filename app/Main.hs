@@ -9,9 +9,21 @@ type Model = String
 
 data Action = Default deriving Show
 
-header_style = style_ (M.fromList 
+global_style = style_ (M.fromList
+    [
+        ("background-color", "black"),
+        ("color", "white")
+    ])
+
+centering = style_ (M.fromList 
     [
         ("text-align", "center")
+    ])
+
+outer_margins = style_ (M.fromList 
+    [
+        ("margin-left", "10%"),
+        ("margin-right", "10%")
     ])
 
 main :: IO ()
@@ -33,7 +45,9 @@ updateModel :: Action -> Model -> Effect Action Model
 updateModel action m = noEff (m)
 
 viewModel :: Model -> View Action
-viewModel x = div_ [] 
+viewModel x = div_ [ outer_margins ] 
     [ 
-        h1_ [ header_style] [ text (ms x) ] 
+        h1_ [ centering ] [ text (ms x) ],
+        hr_ [],
+        a_ [ href_ "https://jupyter.skade.dev" ] [ text "Jupyter" ]
     ]
