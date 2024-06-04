@@ -19,7 +19,7 @@ main = do
     default_model <- defaultModel
     putStrLn "Model:"
     print default_model
-    startApp App { model = default_model, ..}
+    startApp App { model = (Model [Domain "skade.dev"]), ..}
         where 
             initialAction = NoAction
             update = updateModel

@@ -25,6 +25,12 @@ outer_margins = (M.fromList
         ("margin-right", "10%")
     ])
 
+inline :: M.Map MisoString MisoString
+inline = (M.fromList 
+    [
+        ("display", "inline-grid")
+    ])
+
 rounded :: M.Map MisoString MisoString
 rounded = (M.fromList 
     [
@@ -32,7 +38,8 @@ rounded = (M.fromList
         ("border", "1px solid #cccccc"),
         ("border-radius", "5px"),
         ("padding", "5px"),
-        ("white-space", "pre-wrap")
+        ("white-space", "pre-wrap"),
+        ("font-family", "sans-serif")
     ])
 
 button :: M.Map MisoString MisoString
@@ -40,7 +47,8 @@ button = (M.fromList
     [
         ("border 1px solid", "#cccccc"),
         ("border-radius", "5px"),
-        ("padding", "1px")
+        ("padding", "1px"),
+        ("min-width", "100px")
 
     ])
 
