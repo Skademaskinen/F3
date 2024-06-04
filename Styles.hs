@@ -6,12 +6,6 @@ import Miso.String
 import qualified Data.Map as M
 
 -- Styles to be reused everywhere
-global_style :: M.Map MisoString MisoString
-global_style = (M.fromList
-    [
-        ("background-color", "black"),
-        ("color", "white")
-    ])
 centering :: M.Map MisoString MisoString
 centering = (M.fromList 
     [
@@ -34,18 +28,17 @@ inline = (M.fromList
 rounded :: M.Map MisoString MisoString
 rounded = (M.fromList 
     [
-        ("background-color", "#cccccc"),
-        ("border", "1px solid #cccccc"),
+        ("background-color", "#222222"),
+        ("border", "1px solid #222222"),
         ("border-radius", "5px"),
         ("padding", "5px"),
-        ("white-space", "pre-wrap"),
-        ("font-family", "sans-serif")
+        ("white-space", "pre-wrap")
     ])
 
 button :: M.Map MisoString MisoString
 button = (M.fromList
     [
-        ("border 1px solid", "#cccccc"),
+        ("border 1px solid", "#444444"),
         ("border-radius", "5px"),
         ("padding", "1px"),
         ("min-width", "100px")

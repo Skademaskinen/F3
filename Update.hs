@@ -16,3 +16,8 @@ updateModel (Redirect url) m = m <# do
     obj <- create
     consoleLog (pack url)
     set (pack "window.location.href = ") url obj >> pure NoAction
+updateModel (Initialize) m = m <# do 
+    body <- getBody
+    set (pack "style") "background-color: black; color: white; font-family: sans-serif;" (Object body) >> pure NoAction
+
+

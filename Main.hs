@@ -21,7 +21,7 @@ main = do
     print default_model
     startApp App { model = (Model [Domain "skade.dev"]), ..}
         where 
-            initialAction = NoAction
+            initialAction = Initialize
             update = updateModel
             view = viewModel
             events = defaultEvents
