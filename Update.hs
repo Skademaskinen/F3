@@ -8,13 +8,11 @@ import JavaScript.Object.Internal as JsObj
 import Types
 
 -- update model
-updateModel :: Action -> String -> Effect Action String
+updateModel :: Action -> Model -> Effect Action Model
 -- default is doing nothing
-updateModel (Default) m = noEff m
+updateModel (NoAction) m = noEff m
 -- on redirects, change the window location variable in the following monad
 updateModel (Redirect url) m = m <# do 
     obj <- create
     consoleLog (pack url)
-    set (pack "window.location.href = ") url obj >> pure Default
-
-
+    set (pack "window.location.href = ") url obj >> pure NoAction
