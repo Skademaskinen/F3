@@ -25,6 +25,15 @@ inline = (M.fromList
         ("display", "inline-grid")
     ])
 
+inline_container :: M.Map MisoString MisoString
+inline_container = M.union inline (M.fromList 
+    [
+        ("border", "1px solid black"),
+        ("border-radius", "5px"),
+        ("padding", "1px"),
+        ("margin", "4px")
+    ])
+
 rounded :: M.Map MisoString MisoString
 rounded = (M.fromList 
     [

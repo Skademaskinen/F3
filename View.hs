@@ -17,7 +17,7 @@ subdomains = ["jupyter", "nextcloud", "api", "taoshi"]
 
 -- Constructor for a little button to go to a source
 source :: String -> String -> String -> View action
-source label image url = div_ [ style_ inline ] 
+source label image url = div_ [ style_ inline_container ] 
     [
         a_ [ href_ (pack url) ] [ img_ [ src_ (pack image), width_ "100" ]],
         br_ [],
