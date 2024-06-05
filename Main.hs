@@ -1,31 +1,21 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE RecordWildCards #-}
+module Main where
+import IHP.Prelude
 
-import Miso
-import System.Environment
-import JavaScript.Object.Internal as JsObj
+import Config
+import qualified IHP.Server
+import IHP.RouterSupport
+import IHP.FrameworkConfig
+import IHP.Job.Types
+import Web.FrontController
+import Web.Types
 
-import Styles
-import Update
-import View
-import Types
-import Utils
+instance FrontController RootApplication where
+    controllers = [
+            mountFrontController WebApplication
+        ]
+
+instance Worker RootApplication where
+    workers _ = []
 
 main :: IO ()
--- Record wildcards is used here because the line below is very scuffed
---main = startApp (App "Skademaskinen Haskell Server" updateModel viewModel [] defaultEvents Default Nothing Off)
-main = do 
-    putStrLn "Started program"
-    default_model <- defaultModel
-    putStrLn "Model:"
-    print default_model
-    startApp App { model = (Model [Domain "skade.dev"]), ..}
-        where 
-            initialAction = Initialize
-            update = updateModel
-            view = viewModel
-            events = defaultEvents
-            subs = []
-            mountPoint = Nothing 
-            logLevel = Off
-
+main = IHP.Server.run config
