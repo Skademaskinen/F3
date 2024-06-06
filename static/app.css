@@ -12,3 +12,7 @@
 .inline_container:active {
   background-color:black;
 }
+
+hr {
+  color: #ff5500
+}
