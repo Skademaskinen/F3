@@ -33,3 +33,4 @@ allPairs t1 t2 = do
 
 capitalize :: String -> String
 capitalize (x:xs) = (toUpper x) : xs
+capitalize [] = []
