@@ -34,7 +34,7 @@ instance View SnakeView where
         <div style={centering}>
             <div style={mainStyle}>
                 <h3>Danger Noodle!</h3><br>
-                <p>... Some client-side jank, a mix of haskell and javascript</p><br>
+                <p>... Some client-side jank, a mix of haskell and javascript<br>
                 {grid}
             </div>
         </div>
@@ -87,7 +87,13 @@ instance View SnakeView where
             var keycodes = {87:"W",65:"A",83:"S",68:"D"}
 
             document.addEventListener('keydown', event => {
-                if(
+                if(!started){
+                  started = !started
+                  direction = "D"
+                  launchGame()
+                  return
+                }
+                else if(
                     (event.keyCode == 87 && direction == "S") ||
                     (event.keyCode == 65 && direction == "D") ||
                     (event.keyCode == 83 && direction == "W") ||
@@ -100,13 +106,6 @@ instance View SnakeView where
                 }
                 direction = keycodes[event.keyCode]
                 console.log(direction + " Pressed")
-                if(!started){
-                    console.log("starting game!")
-                    alert("Starting Game!")
-                    started = !started
-                    launchGame()
-                }
-
             })
         </script>
     |]
