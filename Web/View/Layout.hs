@@ -30,7 +30,7 @@ defaultLayout inner = [hsx|
             |<br>
             <hr>
         </div>
-        <div class="container mt-4">
+        <div class="container mt-4" style="background-color:#050505;">
             {renderFlashMessages}
             {inner}
         </div>
