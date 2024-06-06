@@ -24,3 +24,8 @@ button = "border:1px solid #444444;" ++
     "border-radius:5px;" ++
     "padding:1px;" ++
     "min-width:100px;" :: Text
+
+codeBlock = "font-family:monospace;" ++
+    "text-align:left;" ++
+    "margin:10px;" ++
+    "white-space:pre-wrap;":: Text 
