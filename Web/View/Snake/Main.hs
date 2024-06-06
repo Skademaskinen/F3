@@ -98,7 +98,7 @@ instance View SnakeView where
                             tiles[coords[1]][coords[0]].style.backgroundColor = "black"
                         }
                         document.getElementById("snake-score").innerHTML = score
-                        await sleep(100)
+                        await sleep(50)
                     }
                 }
                 finally{
