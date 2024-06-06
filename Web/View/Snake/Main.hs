@@ -34,7 +34,15 @@ instance View SnakeView where
         <div style={centering}>
             <div style={mainStyle}>
                 <h3>Danger Noodle!</h3><br>
-                <p>... Some client-side jank, a mix of haskell and javascript</p><br>
+                <p>... Some client-side jank, a mix of haskell and javascript</p><br><br>
+                <div style="text-align:left; margin-left: 5%;line-height:normal">
+                    Controls<br>
+                    Start game: any of [W,A,S,D]<br>
+                    Up: W<br>
+                    Left: A<br>
+                    Down: S<br>
+                    Right: D
+                </div>
                 <div style="display:block ruby;">
                     Score: <p id="snake-score">0</p>
                 </div>
