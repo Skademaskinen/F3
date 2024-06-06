@@ -3,4 +3,5 @@ import Web.Controller.Prelude
 import Web.View.Snake.Main
 
 instance Controller SnakeController where
-    action (SnakeAction) = render MainSnakeView
+    action (SnakeAction) = autoRefresh do 
+        render MainSnakeView

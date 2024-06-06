@@ -1,0 +1,1 @@
+/nix/store/fppm8pf5hgwza1pbvg54clzqd9sb7y16-postgresql-13.14/bin/postgres "-D" "build/db/state" "-k" "/home/mast3r/git/skademaskinen/F3/build/db" "-c" "listen_addresses="
