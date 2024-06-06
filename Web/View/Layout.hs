@@ -27,6 +27,7 @@ defaultLayout inner = [hsx|
             Navigation:
             |<a href="/">Home</a>
             |<a href="/Info">Info</a>
+            |<a href="/Snake">Snake</a>
             |<br>
             <hr>
         </div>
@@ -37,10 +38,6 @@ defaultLayout inner = [hsx|
     </body>
 </html>
 |]
-
--- The 'assetPath' function used below appends a `?v=SOME_VERSION` to the static assets in production
--- This is useful to avoid users having old CSS and JS files in their browser cache once a new version is deployed
--- See https://ihp.digitallyinduced.com/Guide/assets.html for more details
 
 stylesheets :: Html
 stylesheets = [hsx|

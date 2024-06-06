@@ -10,3 +10,5 @@ data WebApplication = WebApplication deriving (Eq, Show)
 data StaticController = MainAction deriving (Eq, Show, Data)
 
 data InfoController = InfoAction deriving (Eq, Show, Data)
+
+data SnakeController = SnakeAction deriving (Eq, Show, Data)

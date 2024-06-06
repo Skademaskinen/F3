@@ -1,7 +1,9 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Web.View.Main.Main where
-import Web.View.Prelude
 
+import Web.View.Prelude
 import Web.View.Styles
+import Utils
 
 --- Types and constants
 -------------------------
@@ -13,16 +15,16 @@ link_image :: String -> String -> String -> Html
 link_image label image url = [hsx|
     <div class="inline_container">
         <a href={url}>
-            <img src={image} width="100" height="100">
+            <img src={image} width="100" height="100" style="padding: 1px;">
         </a>
         <br>
         {label}
     </div>
 |]
 
-render_subdomain_button :: Text -> Html
+render_subdomain_button :: String -> Html
 render_subdomain_button subdomain = [hsx|
-    <button style={button} id={subdomain} onclick="go_to(this.id)">{subdomain}</button>
+    <button id={subdomain} onclick="go_to(this.id)">{capitalize subdomain}</button>
 |]
 
 --- sections
@@ -54,7 +56,7 @@ infoSection = [hsx|
     </div>
 |]
 
-servicesSection :: [Text] -> Html
+servicesSection :: [String] -> Html
 servicesSection subdomains = [hsx|
     <hr>
     <h2 style={centering}>Services</h2>

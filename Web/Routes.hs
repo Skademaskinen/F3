@@ -7,3 +7,5 @@ import Web.Types
 instance AutoRoute StaticController
 
 instance AutoRoute InfoController
+
+instance AutoRoute SnakeController
