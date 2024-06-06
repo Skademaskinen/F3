@@ -33,7 +33,7 @@ instance View MainView where
     html MainView = [hsx|
         <h1 style={centering}>Skademaskinen Webserver</h1>
         <div style={centering}>
-            <img src={assetPath"/icon.png"}>
+            <img src={assetPath"/icon.png"} style="border-radius:50%">
         </div>
         <hr>
         <h2 style={centering}>Sources</h2>
@@ -42,6 +42,11 @@ instance View MainView where
             {link_image "IHP" "https://ihp.digitallyinduced.com/ihp.svg" "https://ihp.digitallyinduced.com/"}
             {link_image "Haskell" "https://wiki.haskell.org/wikiupload/4/4a/HaskellLogoStyPreview-1.png" "https://haskell.org"}
             {link_image "Nix" "https://raw.githubusercontent.com/NixOS/nixos-artwork/53ea652ec7d8af5d21fd2b79b6c49cb39078ddfb/logo/nix-snowflake-colours.svg" "https://nixos.org"}
+            {link_image "Neovim" "https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg" "https://neovim.io"}
+            <br>
+            Source code: <a href="https://github.com/Skademaskinen/F3">
+                <img src="/github.svg" height="20">
+              </a>
         </div>
         <hr>
         <h2 style={centering}>Information</h2>
