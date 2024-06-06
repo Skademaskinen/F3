@@ -58,8 +58,8 @@ instance View InfoView where
                     return (x, y)
             </div>
             <div style={codeBlock}>
-                [in ] allPairs (Node [Leaf 1, Leaf 2, Node [Leaf 3, Leaf 4]]) (Node [Leaf 5, Leaf 6, Node [Leaf 7, Leaf 8]])<br>
-                [out] {allPairs (Node [Leaf 1, Leaf 2, Node [Leaf 3, Leaf 4]]) (Node [Leaf 5, Leaf 6, Node [Leaf 7, Leaf 8]])}
+                [in ] allPairs (Node [Leaf 1, Leaf 2]) (Node [Leaf 3, Leaf 4)<br>
+                [out] {allPairs (Node [Leaf 1, Leaf 2]) (Node [Leaf 3, Leaf 4])}
             </div>
         </div>
     |]
