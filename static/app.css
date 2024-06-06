@@ -1,0 +1,14 @@
+.inline_container {
+    border:1px solid black;
+    border-radius:5px;
+    padding:1px;
+    margin:4px;
+    display: inline-grid;
+}
+.inline_container:hover {
+  background-color:#111111;
+}
+
+.inline_container:active {
+  background-color:black;
+}

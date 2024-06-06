@@ -1,5 +1,5 @@
 module Web.View.Styles where 
-import Web.View.Prelude
+import IHP.ViewPrelude
 
 centering = "text-align:center;" :: Text
 

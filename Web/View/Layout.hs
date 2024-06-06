@@ -8,6 +8,8 @@ import Web.Types
 import Web.Routes
 import Application.Helper.View
 
+import Web.View.Styles
+
 defaultLayout :: Html -> Html
 defaultLayout inner = [hsx|
 <!DOCTYPE html>
@@ -20,7 +22,14 @@ defaultLayout inner = [hsx|
 
         <title>{pageTitleOrDefault "Skademaskinen"}</title>
     </head>
-    <body>
+    <body style={global}>
+        <div style={centering}>
+            Navigation:
+            |<a href="/">Home</a>
+            |<a href="/Info">Info</a>
+            |<br>
+            <hr>
+        </div>
         <div class="container mt-4">
             {renderFlashMessages}
             {inner}
