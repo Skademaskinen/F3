@@ -41,7 +41,9 @@ instance View SnakeView where
                     Up: W<br>
                     Left: A<br>
                     Down: S<br>
-                    Right: D
+                    Right: D<br>
+                    <input style="width:100px" placeholder="Speed" id="speed">
+                    <input style="width:100px" placeholder="Fruit count" id="fruits">
                 </div>
                 <div style="display:block ruby;">
                     Score: <p id="snake-score">0</p>
@@ -106,7 +108,7 @@ instance View SnakeView where
                             tiles[coords[1]][coords[0]].style.backgroundColor = "black"
                         }
                         document.getElementById("snake-score").innerHTML = score
-                        await sleep(50)
+                        await sleep(100-speed)
                     }
                 }
                 finally{
@@ -133,6 +135,8 @@ instance View SnakeView where
             var tiles = []
             var fruits = []
             var tail = []
+            var fruit_count = 5
+            var speed = 25
 
             var score = 0
             var direction = "N"
@@ -165,11 +169,19 @@ instance View SnakeView where
                 console.log(direction + " Pressed")
                 if(!started){
                     console.log("starting game!")
+                    var speed_input = document.getElementById("speed")
+                    var fruits_input = document.getElementById("fruits")
+                    if(speed_input.value != ""){
+                        speed = parseInt(speed_input.value)
+                    }
+                    if(fruits_input.value != ""){
+                        fruit_count = parseInt(fruits_input.value)
+                    }
                     alert("Starting Game!")
                     started = !started
                     score = 0
                     launchGame()
-                    for(var i = 0; i < 5; i++){
+                    for(var i = 0; i < fruit_count; i++){
                         newFruit()
                     }
                 }
