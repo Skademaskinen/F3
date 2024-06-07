@@ -178,6 +178,7 @@ instance View SnakeView where
                                 newFruit()
                             }
                             direction = "D"
+                            next_direction = "D"
                             launchGame()
                         }
                         break
