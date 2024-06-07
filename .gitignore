@@ -4,6 +4,8 @@ result
 .devenv*
 devenv.local.nix
 
+build/db
+
 # direnv
 .direnv
 
