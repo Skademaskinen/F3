@@ -29,6 +29,11 @@ grid = [hsx|
     {forEach [0..19] row}
 |]
 
+fire :: Int -> Html
+fire _ = [hsx|
+    <img src="/fire.gif" width="50%">
+|]
+
 instance View SnakeView where
     html MainSnakeView = [hsx|
         <div style={centering}>
@@ -63,5 +68,8 @@ instance View SnakeView where
                     <th style="width:100px">Fruits</th>
                 </tr>
             </table>
+            <div id="snakefire" style="position:fixed; width:100%; left:0; top:100%">
+                {forEach [0..1] fire}
+            </div>
         </div>
     |]

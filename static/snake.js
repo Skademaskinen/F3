@@ -9,6 +9,7 @@ function newFruit() {
 }
 
 async function launchGame() {
+    document.getElementById("snakefire").style.top = "100%"
     var running = true
     try {
         while (running) {
@@ -42,6 +43,9 @@ async function launchGame() {
                     score_increase = true
                     score++
                     new_fruits.push(newFruit())
+                    if (score < 50) {
+                        document.getElementById("snakefire").style.top = (100-score) + "%"
+                    }
                 } else {
                     new_fruits.push([fruit_x, fruit_y])
                 }
