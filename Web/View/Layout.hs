@@ -26,6 +26,7 @@ defaultLayout inner = [hsx|
         <div style={centering}>
             Navigation:
             |<a href="/">Home</a>
+            |<a href={assetPath "/index.html"}>Old Site</a>
             |<a href="/Info">Info</a>
             |<a href="/Snake">Snake</a>
             |<br>
