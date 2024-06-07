@@ -109,8 +109,8 @@ for (var index = 0; index <= 20*20; index++) {
 }
 var started = false
 
-document.addEventListener('keydown', event => {
-    switch (event.keyCode) {
+function keyEvent(id){
+    switch (id) {
         case 13:
             if (!started) {
                 tiles.forEach(row => row.forEach(tile => tile.style.backgroundColor = "black"))
@@ -152,5 +152,6 @@ document.addEventListener('keydown', event => {
                 next_direction = "D"
             break
     }
-})
- 
+}
+
+document.addEventListener("keydown", event => keyEvent(event.keyCode)) 

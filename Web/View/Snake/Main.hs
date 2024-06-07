@@ -54,9 +54,16 @@ instance View SnakeView where
                     Score: <p id="snake-score">0</p>
                 </div>
                 {grid}
+                <script src={assetPath "/snake.js"}></script>
+                <div style="line-height:normal">
+                    <button onclick="keyEvent(37)">&lArr;</button>
+                    <button onclick="keyEvent(38)">&uArr;</button>
+                    <button onclick="keyEvent(39)">&rArr;</button>
+                    <button onclick="keyEvent(40)">&dArr;</button>
+                    <button onclick="keyEvent(13)">Start</button>
+                </div>
             </div>
         </div>
-        <script src={assetPath "/snake.js"}></script>
         <hr>
         <h2 style={centering}>Scores</h2>
         <div style={centering}>
