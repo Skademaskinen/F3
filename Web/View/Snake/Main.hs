@@ -56,7 +56,7 @@ instance View SnakeView where
                 {grid}
             </div>
         </div>
-        <script src="/snake.js"></script>
+        <script src={assetPath "/snake.js"}></script>
         <hr>
         <h2 style={centering}>Scores</h2>
         <div style={centering}>

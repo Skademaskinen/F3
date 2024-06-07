@@ -1,3 +1,5 @@
+console.log("Initializing snake game")
+
 function newFruit() {
     var coords = [Math.floor(Math.random()*20), Math.floor(Math.random()*20)]
     if (tiles[coords[1]][coords[0]].style.backgroundColor != "black")
